@@ -10,7 +10,7 @@
 
 </div>
 <div align=center>
-<img src="https://github.com/gy65896/OneRestore/assets/48637474/bc9b0831-6599-4f79-b1c6-5f2e371d5137" width="1080">
+<img src="https://github.com/gy65896/OneRestore/assets/48637474/bc9b0831-6599-4f79-b1c6-5f2e371d5137" width="720">
 </div>
 
 ---
