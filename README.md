@@ -10,7 +10,8 @@
 
 </div>
 
-[Fig1-Performance.pdf](https://github.com/user-attachments/files/16073570/Fig1-Performance.pdf)
+![Fig1-Performance](https://github.com/gy65896/OneRestore/assets/48637474/bc9b0831-6599-4f79-b1c6-5f2e371d5137)
+
 
 ---
 >**OneRestore: A Universal Restoration Framework for Composite Degradation**<br>  [Yu Guo](https://scholar.google.com/citations?user=klYz-acAAAAJ&hl=zh-CN), [Yuan Gao](https://scholar.google.com.hk/citations?hl=zh-CN&user=4JpRnU4AAAAJ&view_op=list_works&sortby=pubdate), [Yuxu Lu](https://scholar.google.com.hk/citations?user=XXge2_0AAAAJ&hl=zh-CN), [Huilin Zhu](https://scholar.google.com.hk/citations?hl=zh-CN&user=fluPrxcAAAAJ), [Ryan Wen Liu](http://mipc.whut.edu.cn/index.html), [Shengfeng He](http://www.shengfenghe.com/) <br> 
