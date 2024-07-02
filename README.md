@@ -1,4 +1,4 @@
- # <p align=center>OneRestore: A Universal Restoration Framework for Composite Degradation</p>
+ # <p align=center> [ECCV 2024] OneRestore: A Universal Restoration Framework for Composite Degradation</p>
 
 <div align="center">
 
