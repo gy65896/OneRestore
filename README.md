@@ -9,9 +9,9 @@
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fgy65896%2FOneRestore&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 </div>
-
-![Fig1-Performance](https://github.com/gy65896/OneRestore/assets/48637474/bc9b0831-6599-4f79-b1c6-5f2e371d5137)
-
+<div align=center>
+<img src="https://github.com/gy65896/OneRestore/assets/48637474/bc9b0831-6599-4f79-b1c6-5f2e371d5137" width="540">
+</div>
 
 ---
 >**OneRestore: A Universal Restoration Framework for Composite Degradation**<br>  [Yu Guo](https://scholar.google.com/citations?user=klYz-acAAAAJ&hl=zh-CN), [Yuan Gao](https://scholar.google.com.hk/citations?hl=zh-CN&user=4JpRnU4AAAAJ&view_op=list_works&sortby=pubdate), [Yuxu Lu](https://scholar.google.com.hk/citations?user=XXge2_0AAAAJ&hl=zh-CN), [Huilin Zhu](https://scholar.google.com.hk/citations?hl=zh-CN&user=fluPrxcAAAAJ), [Ryan Wen Liu](http://mipc.whut.edu.cn/index.html), [Shengfeng He](http://www.shengfenghe.com/) <br> 
