@@ -38,7 +38,7 @@ Please download our pre-trained models and put them in  `./ckpts`.
 | :--- | :----------
 |[Text/Visual Embedder](https://1drv.ms/u/s!As3rCDROnrbLgqpnhSQFIoD9msXWOA?e=aUpHOT)  | Text/Visual Embedder trained on our CDD-11.
 |[OneRestore Model](https://1drv.ms/u/s!As3rCDROnrbLgqpmWkGBku6oj33efg?e=7yUGfN)  | OneRestore trained on our CDD-11.
-|[OneRestore Model](https://1drv.ms/u/s!As3rCDROnrbLgqpi-iJOyN6OSYqiaA?e=QFfMeL)  | OneRestore trained on our CDD-11 for Real Scenes.
+|[OneRestore Model-Real](https://1drv.ms/u/s!As3rCDROnrbLgqpi-iJOyN6OSYqiaA?e=QFfMeL)  | OneRestore trained on our CDD-11 for Real Scenes.
 |[OneRestore Model-LOL](https://1drv.ms/u/s!As3rCDROnrbLgqpkSoVB1j-wYHFpHg?e=0gR9pn)  | OneRestore trained on LOL (low light enhancement benchmark).
 |[OneRestore Model-RESIDE-OTS](https://1drv.ms/u/s!As3rCDROnrbLgqpjGh8KjfM_QIJzEw?e=zabGTw)  | OneRestore trained on RESIDE-OTS (image dehazing benchmark).
 |[OneRestore Model-Rain1200](https://1drv.ms/u/s!As3rCDROnrbLgqplAFHv6B348jarGA?e=GuduMT)  | OneRestore trained on Rain1200 (image deraining benchmark).
