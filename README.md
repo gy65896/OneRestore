@@ -135,18 +135,18 @@ python remove_optim.py --type OneRestore --input-file ./ckpts/onerestore_model.t
 
 </div>
 <div align=center>
-<img src="https://github.com/gy65896/OneRestore/assets/48637474/f9a4df1c-ad64-4339-8485-b76f29010bdd" width="1080">
+<img src="https://github.com/gy65896/OneRestore/assets/48637474/f9a4df1c-ad64-4339-8485-b76f29010bdd" width="720">
 </div>
 
 ### Controllability
 
 </div>
 <div align=center>
-<img src="https://github.com/gy65896/OneRestore/assets/48637474/ed57114a-43a5-4221-bc3a-9bc7f3ac2dd5" width="540">
+<img src="https://github.com/gy65896/OneRestore/assets/48637474/ed57114a-43a5-4221-bc3a-9bc7f3ac2dd5" width="480">
 </div>
 </div>
 <div align=center>
-<img src="https://github.com/gy65896/OneRestore/assets/48637474/fd8684f7-8494-4fba-8919-dc50e6acb26f" width="540">
+<img src="https://github.com/gy65896/OneRestore/assets/48637474/fd8684f7-8494-4fba-8919-dc50e6acb26f" width="480">
 </div>
 
 ## Citation
