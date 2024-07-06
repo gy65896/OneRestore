@@ -2,15 +2,12 @@
 
 <div align="center">
  
-![paper](https://img.shields.io/badge/OneRestore-paper-blue.svg)
 ![arXiv](https://img.shields.io/badge/OneRestore-arXiv-red.svg)
-![poster](https://img.shields.io/badge/OneRestore-poster-green.svg)
-![video](https://img.shields.io/badge/OneRestore-video-orange.svg)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fgy65896%2FOneRestore&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 </div>
 <div align=center>
-<img src="https://github.com/gy65896/OneRestore/assets/48637474/bc9b0831-6599-4f79-b1c6-5f2e371d5137" width="720">
+<img src="https://github.com/gy65896/OneRestore/assets/48637474/7e037f8e-8a8d-4953-8aa6-5142e64f2005" width="720">
 </div>
 
 ---
@@ -25,6 +22,10 @@
 
 ## Network Architecture
 
+</div>
+<div align=center>
+<img src="https://github.com/gy65896/OneRestore/assets/48637474/e26fcaae-3688-489f-8bb4-a698bae3e7fb" width="1080">
+</div>
 
 ## Citation
 
