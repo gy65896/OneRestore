@@ -44,6 +44,20 @@ Please download our pre-trained models and put them in  `./ckpts`.
 |[OneRestore Model-Rain1200](https://1drv.ms/u/s!As3rCDROnrbLgqplAFHv6B348jarGA?e=GuduMT)  | OneRestore trained on Rain1200 (image deraining benchmark).
 |[OneRestore Model-Snow100k-L](https://1drv.ms/u/s!As3rCDROnrbLgqphsWWxLZN_7JFJDQ?e=pqezzo)  | OneRestore trained on Snow100k-L (image desnowing benchmark).
 
+### Inference
+
+We provide two samples in `./image` for the quick inference:
+
+```
+python test.py --embedder-model-path ./ckpts/embedder_model.tar --restore-model-path ./ckpts/onerestore_cdd-11.tar --input ./image/ --output ./output/ --concat
+```
+
+You can also input the prompt to perform controllable restoration. For example:
+
+```
+python test.py --embedder-model-path ./ckpts/embedder_model.tar --restore-model-path ./ckpts/onerestore_cdd-11.tar --prompt low_haze_rain --input ./image/ --output ./output/ --concat
+```
+
 ## Citation
 
 ```
