@@ -82,7 +82,7 @@ if __name__ == "__main__":
      # load model
     parser.add_argument("--seed", type=int, default = 124)
     parser.add_argument("--pre_weight", type=str, default = '')
-    parser.add_argument("--lr", type=int, default = 0.0001)
+    parser.add_argument("--lr", type=float, default = 0.0001)
     parser.add_argument("--type_name", type=list, default = ['clear', 'low', 'haze', 'rain',\
                                         'snow', 'low_haze', 'low_rain', 'low_snow', 'haze_rain',\
                                         'haze_snow', 'low_haze_rain', 'low_haze_snow'])
