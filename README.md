@@ -142,12 +142,11 @@ python remove_optim.py --type OneRestore --input-file ./ckpts/onerestore_model.t
 
 </div>
 <div align=center>
-<img src="https://github.com/gy65896/OneRestore/assets/48637474/ed57114a-43a5-4221-bc3a-9bc7f3ac2dd5" width="1080">
+<img src="https://github.com/gy65896/OneRestore/assets/48637474/ed57114a-43a5-4221-bc3a-9bc7f3ac2dd5" width="640">
 </div>
-
 </div>
 <div align=center>
-<img src="https://github.com/gy65896/OneRestore/assets/48637474/fd8684f7-8494-4fba-8919-dc50e6acb26f" width="1080">
+<img src="https://github.com/gy65896/OneRestore/assets/48637474/fd8684f7-8494-4fba-8919-dc50e6acb26f" width="640">
 </div>
 
 ## Citation
