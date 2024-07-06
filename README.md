@@ -55,7 +55,66 @@ python test.py --embedder-model-path ./ckpts/embedder_model.tar --restore-model-
 You can also input the prompt to perform controllable restoration. For example:
 
 ```
-python test.py --embedder-model-path ./ckpts/embedder_model.tar --restore-model-path ./ckpts/onerestore_cdd-11.tar --prompt low_haze_rain --input ./image/ --output ./output/ --concat
+python test.py --embedder-model-path ./ckpts/embedder_model.tar --restore-model-path ./ckpts/onerestore_cdd-11.tar --prompt low_haze --input ./image/ --output ./output/ --concat
+```
+
+## Training
+
+### Prepare Dataset
+
+We provide the download link of our Composite Degradation Dataset with 11 types of degradation ([CDD-11](https://1drv.ms/f/s!As3rCDROnrbLgqpezG4sao-u9ddDhw?e=A0REHx)).
+
+Preparing the train and test datasets as follows:
+
+```
+./data/
+|--train
+|  |--clear
+|  |  |--000001.png
+|  |  |--000002.png
+|  |--low
+|  |--haze
+|  |--rain
+|  |--snow
+|  |--low_haze
+|  |--low_rain
+|  |--low_snow
+|  |--haze_rain
+|  |--haze_snow
+|  |--low_haze_rain
+|  |--low_haze_snow
+|--test
+```
+### Train Model
+
+1. Train Text/Visual Embedder by
+
+```
+python train_Embedder.py --train-dir ./data/CDD-11_train --test-dir ./data/CDD-11_test --check-dir ./ckpts --batch 256 --num-workers 0 --epoch 200 --lr 1e-4 --lr-decay 50
+```
+
+2. Remove the optimizer weights in the Embedder model file by
+
+```
+python remove_optim.py --type Embedder --input-file ./ckpts/embedder_model.tar --output-file ./ckpts/embedder_model.tar
+```
+
+3. Generate the `dataset.h5` file for training OneRestore by
+
+```
+python makedataset.py --train-path ./data/CDD-11_train --data-name dataset.h5 --patch-size 256 --stride 200
+```
+
+4. Train OneRestore model by
+
+```
+python train_OneRestore.py --embedder-model-path ./ckpts/embedder_model.tar --save-model-path ./ckpts --train-input ./dataset.h5 --test-input ./data/CDD-11_test --output ./result/ --epoch 120 --bs 4 --lr 1e-4 --adjust-lr 30 --num-works 4 --loss-weight (0.6,0.3,0.1)
+```
+
+5. Remove the optimizer weights in the OneRestore model file by
+
+```
+python remove_optim.py --type OneRestore --input-file ./ckpts/onerestore_model.tar --output-file ./ckpts/onerestore_model.tar
 ```
 
 ## Citation
