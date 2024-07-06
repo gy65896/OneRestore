@@ -23,4 +23,15 @@
 ## News 🚀
 * **2024.07.02**: OneRestore is accepted by ECCV2024.
 
+## Citation
+
+```
+@inproceedings{guo2024onerestore,
+  title={OneRestore: A Universal Restoration Framework for Composite Degradation},
+  author={Guo, Yu and Gao, Yuan and Lu, Yuxu and Liu, Ryan Wen and He, Shengfeng},
+  booktitle={Proceedings of the European Conference on Computer Vision},
+  year={2024}
+}
+```
+
 waiting for update
