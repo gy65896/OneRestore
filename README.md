@@ -108,7 +108,7 @@ python makedataset.py --train-path ./data/CDD-11_train --data-name dataset.h5 --
 4. Train OneRestore model by
 
 ```
-python train_OneRestore.py --embedder-model-path ./ckpts/embedder_model.tar --save-model-path ./ckpts --train-input ./dataset.h5 --test-input ./data/CDD-11_test --output ./result/ --epoch 120 --bs 4 --lr 1e-4 --adjust-lr 30 --num-works 4 --loss-weight (0.6,0.3,0.1)
+python train_OneRestore.py --embedder-model-path ./ckpts/embedder_model.tar --save-model-path ./ckpts --train-input ./dataset.h5 --test-input ./data/CDD-11_test --output ./result/ --epoch 120 --bs 4 --lr 1e-4 --adjust-lr 30 --num-works 4
 ```
 
 5. Remove the optimizer weights in the OneRestore model file by
