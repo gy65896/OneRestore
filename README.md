@@ -156,4 +156,4 @@ python remove_optim.py --type OneRestore --input-file ./ckpts/onerestore_model.t
 }
 ```
 
-waiting for update
+#### If you have any questions, please get in touch with me (yuguo@whut.edu.cn).
