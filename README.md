@@ -117,6 +117,21 @@ python train_OneRestore.py --embedder-model-path ./ckpts/embedder_model.tar --sa
 python remove_optim.py --type OneRestore --input-file ./ckpts/onerestore_model.tar --output-file ./ckpts/onerestore_model.tar
 ```
 
+## Performance
+
+### CDD-11
+
+</div>
+<div align=center>
+<img src="https://github.com/gy65896/OneRestore/assets/48637474/e8b5d6f6-b78c-43a8-9c21-4e78c166fecf" width="720">
+</div>
+
+</div>
+<div align=center>
+<img src="https://github.com/gy65896/OneRestore/assets/48637474/638c6530-0f2e-4a52-978d-fb795dc48d03" width="1080">
+</div>
+
+
 ## Citation
 
 ```
