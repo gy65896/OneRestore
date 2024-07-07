@@ -46,7 +46,7 @@ conda create -n onerestore python=3.7
 conda activate onerestore 
 
 # download ckpts
-put [embedder_model.tar](https://1drv.ms/u/s!As3rCDROnrbLgqpnhSQFIoD9msXWOA?e=aUpHOT) and [onerestore_cdd-11.tar](https://1drv.ms/u/s!As3rCDROnrbLgqpmWkGBku6oj33efg?e=7yUGfN) in ckpts folder
+put embedder_model.tar and onerestore_cdd-11.tar in ckpts folder
 
 # install pytorch (Take cuda 11.7 as an example to install torch 1.13)
 pip install torch==1.13.0+cu117 torchvision==0.14.0+cu117 torchaudio==0.13.0 --extra-index-url https://download.pytorch.org/whl/cu117
