@@ -5,7 +5,6 @@ pandas
 einops
 thop
 fasttext
-genism
 opencv-python
 h5py
 matplotlib
