@@ -1,4 +1,4 @@
-import argparse, os, yaml, torch, time
+import argparse, os, torch, time
 import torch.optim
 
 from utils.utils import load_embedder_ckpt_with_optim, adjust_learning_rate, freeze_text_embedder, AverageMeter
