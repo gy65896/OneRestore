@@ -22,6 +22,7 @@
 ---
 
 ## News 🚀
+* **2024.07.27**: Code for multiple GPUs training is released.
 * **2024.07.20**: [New Website](https://gy65896.github.io/projects/ECCV2024_OneRestore) has been created.
 * **2024.07.10**: [Paper](https://arxiv.org/abs/2407.04621) is released on ArXiv.
 * **2024.07.07**: Code and Dataset are released.
@@ -118,41 +119,41 @@ Preparing the train and test datasets as follows:
 ```
 ### Train Model
 
-1. Train Text/Visual Embedder by
+**1. Train Text/Visual Embedder by**
 
 ```
 python train_Embedder.py --train-dir ./data/CDD-11_train --test-dir ./data/CDD-11_test --check-dir ./ckpts --batch 256 --num-workers 0 --epoch 200 --lr 1e-4 --lr-decay 50
 ```
 
-2. Remove the optimizer weights in the Embedder model file by
+**2. Remove the optimizer weights in the Embedder model file by**
 
 ```
 python remove_optim.py --type Embedder --input-file ./ckpts/embedder_model.tar --output-file ./ckpts/embedder_model.tar
 ```
 
-3. Generate the `dataset.h5` file for training OneRestore by
+**3. Generate the `dataset.h5` file for training OneRestore by**
 
 ```
 python makedataset.py --train-path ./data/CDD-11_train --data-name dataset.h5 --patch-size 256 --stride 200
 ```
 
-4. Train OneRestore model by
+**4. Train OneRestore model by**
 
-- Single GPU
+- **Single GPU**
 
 ```
 python train_OneRestore_single-gpu.py --embedder-model-path ./ckpts/embedder_model.tar --save-model-path ./ckpts --train-input ./dataset.h5 --test-input ./data/CDD-11_test --output ./result/ --epoch 120 --bs 4 --lr 1e-4 --adjust-lr 30 --num-works 4
 ```
 
-- Multiple GPUs
+- **Multiple GPUs**
 
-Assuming you train the OneRestore model using 4 GPUs (i.e., 0, 1, 2, 3), you can use the following command. Note that the number of nproc_per_node should equal the number of GPUs.
+Assuming you train the OneRestore model using 4 GPUs (e.g., 0, 1, 2, and 3), you can use the following command. Note that the number of nproc_per_node should equal the number of GPUs.
 
 ```
 CUDA_VISIBLE_DEVICES=0, 1, 2, 3 torchrun --nproc_per_node=4 train_OneRestore_multi-gpu.py --embedder-model-path ./ckpts/embedder_model.tar --save-model-path ./ckpts --train-input ./dataset.h5 --test-input ./data/CDD-11_test --output ./result/ --epoch 120 --bs 4 --lr 1e-4 --adjust-lr 30 --num-works 4
 ```
 
-5. Remove the optimizer weights in the OneRestore model file by
+**5. Remove the optimizer weights in the OneRestore model file by**
 
 ```
 python remove_optim.py --type OneRestore --input-file ./ckpts/onerestore_model.tar --output-file ./ckpts/onerestore_model.tar
