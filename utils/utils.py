@@ -50,26 +50,31 @@ def load_restore_ckpt(device, freeze_model=False, ckpt_name=None):
 
     return model
 
-def load_restore_ckpt_with_optim(device, freeze_model=False, ckpt_name=None, lr=None):
+def load_restore_ckpt_with_optim(device, local_rank=None, freeze_model=False, ckpt_name=None, lr=None):
     if ckpt_name != None:
-        model_info = torch.load(ckpt_name, map_location='cuda:0')
+        model_info = torch.load(ckpt_name)
 
         print('==> loading existing OneRestore model:', ckpt_name)
         model = OneRestore().to(device)
         optimizer = torch.optim.Adam(model.parameters(), lr=lr) if lr != None else None
+        model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[local_rank], output_device=local_rank, find_unused_parameters=True) if local_rank != None else model
 
-        weights_dict = {}
-        for k, v in model_info['state_dict'].items():
-            new_k = k.replace('module.', '') if 'module' in k else k
-            weights_dict[new_k] = v
-
-        model.load_state_dict(weights_dict)
+        if local_rank != None:
+            model.load_state_dict(model_info['state_dict'])
+        else:
+            weights_dict = {}
+            for k, v in model_info['state_dict'].items():
+                new_k = k.replace('module.', '') if 'module' in k else k
+                weights_dict[new_k] = v
+            model.load_state_dict(weights_dict)
+        optimizer = torch.optim.Adam(model.parameters())
+        optimizer.load_state_dict(model_info['optimizer'])
         cur_epoch = model_info['epoch']
     else:
         print('==> Initialize OneRestore model.')
         model = OneRestore().to(device)
         optimizer = torch.optim.Adam(model.parameters(), lr=lr)
-        model = torch.nn.DataParallel(model).to(device)
+        model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[local_rank], output_device=local_rank, find_unused_parameters=True) if local_rank != None else torch.nn.DataParallel(model)
         cur_epoch = 0
 
     if freeze_model:
@@ -78,8 +83,6 @@ def load_restore_ckpt_with_optim(device, freeze_model=False, ckpt_name=None, lr=
     print("Number of OneRestore parameter: %.2fM" % (total/1e6))
 
     return model, optimizer, cur_epoch
-
-
 
 def load_embedder_ckpt_with_optim(device, args, combine_type = ['clear', 'low', 'haze', 'rain', 'snow',\
     'low_haze', 'low_rain', 'low_snow', 'haze_rain', 'haze_snow', 'low_haze_rain', 'low_haze_snow']):
@@ -182,12 +185,15 @@ def tensor_metric(img, imclean, model, data_range=1):
     
     SUM = 0
     for i in range(img_cpu.shape[0]):
+        
         if model == 'PSNR':
             SUM += compare_psnr(imgclean[i, :, :, :], img_cpu[i, :, :, :],data_range=data_range)
         elif model == 'MSE':
             SUM += compare_mse(imgclean[i, :, :, :], img_cpu[i, :, :, :])
         elif model == 'SSIM':
             SUM += compare_ssim(imgclean[i, :, :, :], img_cpu[i, :, :, :], data_range=data_range, multichannel = True)
+            # due to the skimage vision problem, you can replace above line by
+            # SUM += compare_ssim(imgclean[i, :, :, :], img_cpu[i, :, :, :], data_range=data_range, channel_axis=-1)
         else:
             print('Model False!')
         
@@ -201,7 +207,7 @@ def load_excel(x):
 
     writer = pd.ExcelWriter('./mertic_result.xlsx')	
     data1.to_excel(writer, 'PSNR-SSIM', float_format='%.5f')
-    writer.save()
+    # writer.save()
     writer.close()
 
 def freeze(m):
