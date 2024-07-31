@@ -191,7 +191,7 @@ python remove_optim.py --type OneRestore --input-file ./ckpts/onerestore_model.t
 
 </div>
 <div align=center>
-<img src="https://github.com/gy65896/OneRestore/blob/main/poster/OneRestore_poster.png" width="720">
+<img src="https://github.com/gy65896/OneRestore/blob/main/poster/OneRestore_poster.png" width="1080">
 </div>
 
 
