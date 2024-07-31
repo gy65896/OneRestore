@@ -187,6 +187,14 @@ python remove_optim.py --type OneRestore --input-file ./ckpts/onerestore_model.t
 <img src="https://github.com/gy65896/OneRestore/assets/48637474/ed57114a-43a5-4221-bc3a-9bc7f3ac2dd5" width="410"><img src="https://github.com/gy65896/OneRestore/assets/48637474/fd8684f7-8494-4fba-8919-dc50e6acb26f" width="410">
 </div>
 
+### Controllability
+
+</div>
+<div align=center>
+<img src="https://github.com/gy65896/OneRestore/blob/main/poster/OneRestore_poster.png" width="410">
+</div>
+
+
 ## Citation
 
 ```
