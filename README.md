@@ -177,9 +177,9 @@ A generated example is as follows:
 | :--- | :---| :---| :--- | :---
 | <img src="https://github.com/user-attachments/assets/243a7018-48db-41af-ad80-1f3e2e67ccdb" width="200"> | <img src="https://github.com/user-attachments/assets/dea93b3a-88b9-41cc-9014-5c864d8755b3" width="200"> | <img src="https://github.com/user-attachments/assets/0860d4fc-eb13-4c50-88bf-739f3e3f9908" width="200"> | <img src="https://github.com/user-attachments/assets/0bb06b82-42ee-4b8c-807a-0f7cc728ec97" width="200"> | <img src="https://github.com/user-attachments/assets/d465721b-bc91-4671-817a-e7253be6c890" width="200">
 
-(Notes: The rain and snow masks do not require strict alignment with the image.)
+(Note: The rain and snow masks do not require strict alignment with the image.)
 
- - Prepare the datasets as follows:
+ - Prepare the dataset as follows:
 
 ```
 ./syn_data/
@@ -215,6 +215,7 @@ python syn_data.py --hq-file ./data/clear/ --light-file ./data/light_map/ --dept
 ```
 python syn_data.py --hq-file ./data/clear/ --light-file ./data/light_map/ --depth-file ./data/depth_map/ --rain-file ./data/rain_mask/ --snow-file ./data/snow_mask/ --out-file ./out/ --low --haze --snow
 ```
+(Note: The degradation types can be customized according to specific needs.)
 
 | clear | low+haze+rain | low+haze+snow
 | :--- | :--- | :---
