@@ -217,7 +217,7 @@ python syn_data.py --hq-file ./data/clear/ --light-file ./data/light_map/ --dept
 ```
 (Note: The degradation types can be customized according to specific needs.)
 
-| clear | low+haze+rain | low+haze+snow
+| Clear Image | low+haze+rain | low+haze+snow
 | :--- | :--- | :---
 | <img src="https://github.com/user-attachments/assets/243a7018-48db-41af-ad80-1f3e2e67ccdb" width="200"> | <img src="https://github.com/user-attachments/assets/4e662af4-e731-449b-a5b2-c2e93d34be75" width="200"> | <img src="https://github.com/user-attachments/assets/108f08c6-d2e1-4a50-96fa-93615aaf5cb9" width="200">
 
