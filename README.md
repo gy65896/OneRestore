@@ -256,7 +256,7 @@ python syn_data.py --hq-file ./data/clear/ --light-file ./data/light_map/ --dept
 @inproceedings{guo2024onerestore,
   title={OneRestore: A Universal Restoration Framework for Composite Degradation},
   author={Guo, Yu and Gao, Yuan and Lu, Yuxu and Liu, Ryan Wen and He, Shengfeng},
-  booktitle={Proceedings of the European Conference on Computer Vision},
+  booktitle={European Conference on Computer Vision},
   year={2024}
 }
 ```
