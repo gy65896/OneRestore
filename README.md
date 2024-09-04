@@ -23,6 +23,7 @@
 ---
 
 ## News 🚀
+* **2024.09.03**: Code for data synthesis is released.
 * **2024.07.27**: Code for multiple GPUs training is released.
 * **2024.07.20**: [New Website](https://gy65896.github.io/projects/ECCV2024_OneRestore) has been created.
 * **2024.07.10**: [Paper](https://arxiv.org/abs/2407.04621) is released on ArXiv.
@@ -159,6 +160,65 @@ CUDA_VISIBLE_DEVICES=0, 1, 2, 3 torchrun --nproc_per_node=4 train_OneRestore_mul
 ```
 python remove_optim.py --type OneRestore --input-file ./ckpts/onerestore_model.tar --output-file ./ckpts/onerestore_model.tar
 ```
+
+## Customize your own composite degradation dataset
+
+**1. Prepare raw data**
+
+ - Collect your own clear images.
+ - Generate the depth map based on [MegaDepth](https://github.com/zhengqili/MegaDepth).
+ - Generate the light map based on [LIME](https://github.com/estija/LIME).
+ - Generate the rain mask database based on [RainStreakGen](https://github.com/liruoteng/RainStreakGen?tab=readme-ov-file).
+ - Download the snow mask database from [Snow100k](https://sites.google.com/view/yunfuliu/desnownet).
+
+A generated example is as follows:
+
+| Clear Image | Depth Map | Light Map | Rain Mask | Snow Mask
+| :--- | :---| :---| :--- | :---
+| <img src="https://github.com/user-attachments/assets/243a7018-48db-41af-ad80-1f3e2e67ccdb" width="200"> | <img src="https://github.com/user-attachments/assets/dea93b3a-88b9-41cc-9014-5c864d8755b3" width="200"> | <img src="https://github.com/user-attachments/assets/0860d4fc-eb13-4c50-88bf-739f3e3f9908" width="200"> | <img src="https://github.com/user-attachments/assets/0bb06b82-42ee-4b8c-807a-0f7cc728ec97" width="200"> | <img src="https://github.com/user-attachments/assets/d465721b-bc91-4671-817a-e7253be6c890" width="200">
+
+(Notes: The rain and snow masks do not require strict alignment with the image.)
+
+ - Prepare the datasets as follows:
+
+```
+./syn_data/
+|--data
+|  |--clear
+|  |  |--000001.png
+|  |  |--000002.png
+|  |--depth_map
+|  |  |--000001.png
+|  |  |--000002.png
+|  |--light_map
+|  |  |--000001.png
+|  |  |--000002.png
+|  |--rain_mask
+|  |  |--aaaaaa.png
+|  |  |--bbbbbb.png
+|  |--snow_mask
+|  |  |--cccccc.png
+|  |  |--dddddd.png
+|--out
+```
+
+**2. Generate composite degradation images**
+
+ - low+haze+rain
+
+```
+python syn_data.py --hq-file ./data/clear/ --light-file ./data/light_map/ --depth-file ./data/depth_map/ --rain-file ./data/rain_mask/ --snow-file ./data/snow_mask/ --out-file ./out/ --low --haze --rain
+```
+
+ - low+haze+snow
+
+```
+python syn_data.py --hq-file ./data/clear/ --light-file ./data/light_map/ --depth-file ./data/depth_map/ --rain-file ./data/rain_mask/ --snow-file ./data/snow_mask/ --out-file ./out/ --low --haze --snow
+```
+
+| clear | low+haze+rain | low+haze+snow
+| :--- | :--- | :---
+| <img src="https://github.com/user-attachments/assets/243a7018-48db-41af-ad80-1f3e2e67ccdb" width="200"> | <img src="https://github.com/user-attachments/assets/4e662af4-e731-449b-a5b2-c2e93d34be75" width="200"> | <img src="https://github.com/user-attachments/assets/108f08c6-d2e1-4a50-96fa-93615aaf5cb9" width="200">
 
 ## Performance
 
