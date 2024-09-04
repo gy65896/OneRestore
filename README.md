@@ -23,7 +23,7 @@
 ---
 
 ## News 🚀
-* **2024.09.03**: Code for data synthesis is released.
+* **2024.09.04**: Code for data synthesis is released.
 * **2024.07.27**: Code for multiple GPUs training is released.
 * **2024.07.20**: [New Website](https://gy65896.github.io/projects/ECCV2024_OneRestore) has been created.
 * **2024.07.10**: [Paper](https://arxiv.org/abs/2407.04621) is released on ArXiv.
