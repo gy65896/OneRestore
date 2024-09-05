@@ -164,7 +164,7 @@ CUDA_VISIBLE_DEVICES=0, 1, 2, 3 torchrun --nproc_per_node=4 train_OneRestore_mul
 python remove_optim.py --type OneRestore --input-file ./ckpts/onerestore_model.tar --output-file ./ckpts/onerestore_model.tar
 ```
 
-## Customize your own composite degradation dataset
+### Customize your own composite degradation dataset
 
 **1. Prepare raw data**
 
