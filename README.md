@@ -27,7 +27,7 @@
 ---
 
 ## News 🚀
-* **2024.09.07**:[Hugging Face Demo](https://huggingface.co/spaces/gy65896/OneRestore) is released.
+* **2024.09.07**: [Hugging Face Demo](https://huggingface.co/spaces/gy65896/OneRestore) is released.
 * **2024.09.05**: Video and poster are released.
 * **2024.09.04**: Code for data synthesis is released.
 * **2024.07.27**: Code for multiple GPUs training is released.
