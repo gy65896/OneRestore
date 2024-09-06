@@ -6,6 +6,7 @@ from PIL import Image
 import numpy as np
 from utils.utils import load_restore_ckpt, load_embedder_ckpt
 import os
+from gradio_imageslider import ImageSlider
 
 # Enforce CPU usage
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -48,7 +49,7 @@ def enhance_image(image, degradation_type=None):
         enhanced_tensor = restorer(input_tensor, text_embedding)
     
     # Postprocess the output
-    return postprocess_image(enhanced_tensor), text
+    return (image, postprocess_image(enhanced_tensor)), text
 
 # Define the Gradio interface
 def inference(image, degradation_type=None):
@@ -72,7 +73,10 @@ interface = gr.Interface(
                                                     'haze_snow', 'low_haze_rain', 'low_haze_snow'], label="Degradation Type", value="auto")  # Manual or auto degradation
     ],
     outputs=[
-        gr.Image(type="pil"),  # Enhanced image output
+        ImageSlider(label="Restored Image", 
+                        type="pil",
+                        show_download_button=True,
+                        ),  # Enhanced image outputImageSlider(type="pil", show_download_button=True, ),
         gr.Textbox(label="Degradation Type")  # Display the estimated degradation type
     ],
     title="Image Restoration with OneRestore",
