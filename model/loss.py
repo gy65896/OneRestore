@@ -78,8 +78,7 @@ def ssim(img1, img2, window_size=11, window=None, size_average=True, full=False,
 
 
 def msssim(img1, img2, window_size=11, size_average=True, val_range=None, normalize=False):
-    device = img1.device
-    weights = torch.FloatTensor([0.0448, 0.2856, 0.3001, 0.2363, 0.1333]).to(device)
+    weights = torch.FloatTensor([0.0448, 0.2856, 0.3001, 0.2363, 0.1333]).to(img1.device)
     levels = weights.size()[0]
     mssim = []
     mcs = []
@@ -171,7 +170,7 @@ class ContrastLoss(nn.Module):
         super(ContrastLoss, self).__init__()
         self.l1 = nn.L1Loss()
         self.model = vgg16(weights = torchvision.models.VGG16_Weights.DEFAULT)
-        self.model = self.model.features[:16].cuda()
+        self.model = self.model.features[:16].to("cuda" if torch.cuda.is_available() else "cpu")
         for param in self.model.parameters():
             param.requires_grad = False
         self.layer_name_mapping = {

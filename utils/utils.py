@@ -15,17 +15,20 @@ def load_embedder_ckpt(device, freeze_model=False, ckpt_name=None,
                                             'low_haze', 'low_rain', 'low_snow', 'haze_rain',\
                                                     'haze_snow', 'low_haze_rain', 'low_haze_snow']):
     if ckpt_name != None:
-        model_info = torch.load(ckpt_name)
+        if torch.cuda.is_available():
+            model_info = torch.load(ckpt_name)
+        else:
+            model_info = torch.load(ckpt_name, map_location=torch.device('cpu'))
 
         print('==> loading existing Embedder model:', ckpt_name)
         model = Embedder(combine_type)
         model.load_state_dict(model_info)
-        model.to(device)
+        model.to("cuda" if torch.cuda.is_available() else "cpu")
 
     else:
         print('==> Initialize Embedder model.')
         model = Embedder(combine_type)
-        model.to(device)
+        model.to("cuda" if torch.cuda.is_available() else "cpu")
 
     if freeze_model:
         freeze(model)
@@ -34,14 +37,17 @@ def load_embedder_ckpt(device, freeze_model=False, ckpt_name=None,
 
 def load_restore_ckpt(device, freeze_model=False, ckpt_name=None):
     if ckpt_name != None:
-        model_info = torch.load(ckpt_name)
+        if torch.cuda.is_available():
+            model_info = torch.load(ckpt_name)
+        else:
+            model_info = torch.load(ckpt_name, map_location=torch.device('cpu'))
         print('==> loading existing OneRestore model:', ckpt_name)
-        model = OneRestore().to(device)
+        model = OneRestore().to("cuda" if torch.cuda.is_available() else "cpu")
         model.load_state_dict(model_info)
     else:
         print('==> Initialize OneRestore model.')
-        model = OneRestore().to(device)
-        model = torch.nn.DataParallel(model).to(device)
+        model = OneRestore().to("cuda" if torch.cuda.is_available() else "cpu")
+        model = torch.nn.DataParallel(model).to("cuda" if torch.cuda.is_available() else "cpu")
 
     if freeze_model:
         freeze(model)
@@ -52,10 +58,13 @@ def load_restore_ckpt(device, freeze_model=False, ckpt_name=None):
 
 def load_restore_ckpt_with_optim(device, local_rank=None, freeze_model=False, ckpt_name=None, lr=None):
     if ckpt_name != None:
-        model_info = torch.load(ckpt_name)
+        if torch.cuda.is_available():
+            model_info = torch.load(ckpt_name)
+        else:
+            model_info = torch.load(ckpt_name, map_location=torch.device('cpu'))
 
         print('==> loading existing OneRestore model:', ckpt_name)
-        model = OneRestore().to(device)
+        model = OneRestore().to("cuda" if torch.cuda.is_available() else "cpu")
         optimizer = torch.optim.Adam(model.parameters(), lr=lr) if lr != None else None
         model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[local_rank], output_device=local_rank, find_unused_parameters=True) if local_rank != None else model
 
@@ -72,7 +81,7 @@ def load_restore_ckpt_with_optim(device, local_rank=None, freeze_model=False, ck
         cur_epoch = model_info['epoch']
     else:
         print('==> Initialize OneRestore model.')
-        model = OneRestore().to(device)
+        model = OneRestore().to("cuda" if torch.cuda.is_available() else "cpu")
         optimizer = torch.optim.Adam(model.parameters(), lr=lr)
         model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[local_rank], output_device=local_rank, find_unused_parameters=True) if local_rank != None else torch.nn.DataParallel(model)
         cur_epoch = 0
@@ -96,7 +105,7 @@ def load_embedder_ckpt_with_optim(device, args, combine_type = ['clear', 'low', 
     print('Training embedder seed:', seed)
 
     # embedder model
-    embedder = Embedder(combine_type).to(device)
+    embedder = Embedder(combine_type).to("cuda" if torch.cuda.is_available() else "cpu")
 
     if args.pre_weight == '':
         optimizer = torch.optim.Adam(embedder.parameters(), lr=args.lr)
@@ -104,6 +113,10 @@ def load_embedder_ckpt_with_optim(device, args, combine_type = ['clear', 'low', 
     else:
         try:
             embedder_info = torch.load(f'{args.check_dir}/{args.pre_weight}')
+            if torch.cuda.is_available():
+                embedder_info = torch.load(f'{args.check_dir}/{args.pre_weight}')
+            else:
+                embedder_info = torch.load(f'{args.check_dir}/{args.pre_weight}', map_location=torch.device('cpu'))
             embedder.load_state_dict(embedder_info['state_dict'])
             optimizer = torch.optim.Adam(embedder.parameters(), lr=args.lr)
             optimizer.load_state_dict(embedder_info['optimizer'])
@@ -163,7 +176,7 @@ def data_process(data, args, device):
             else:
                 neg_data[i,k,:,:,:] = data[i, j, :, :,:]
                 k=k+1
-    return pos_data.to(device), [inp_data.to(device), inp_class], neg_data.to(device)
+    return pos_data.to("cuda" if torch.cuda.is_available() else "cpu"), [inp_data.to("cuda" if torch.cuda.is_available() else "cpu"), inp_class], neg_data.to("cuda" if torch.cuda.is_available() else "cpu")
 
 def print_args(argspar):
     print("\nParameter Print")

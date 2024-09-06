@@ -104,7 +104,7 @@ class Embedder(nn.Module):
         self.type2idx = {self.type_name[i]: i for i in range(len(self.type_name))}
         self.num_type = len(self.type_name)
         train_type = [self.type2idx[type_i] for type_i in self.type_name]
-        self.train_type = torch.LongTensor(train_type).cuda()
+        self.train_type = torch.LongTensor(train_type).to("cuda" if torch.cuda.is_available() else "cpu")
 
         wordemb, self.word_dim = \
             initialize_wordembedding_matrix(self.wordembs, self.type_name)
@@ -161,7 +161,7 @@ class Embedder(nn.Module):
         pred = self.classifier(img, scene_weight)
         pred = torch.max(pred, dim=1)[1]
 
-        out_embedding = torch.zeros((bs,self.out_dim)).cuda()
+        out_embedding = torch.zeros((bs,self.out_dim)).to("cuda" if torch.cuda.is_available() else "cpu")
         for i in range(bs):
             out_embedding[i,:] = scene_weight[pred[i],:]
         num_type = self.train_type[pred]
@@ -177,11 +177,11 @@ class Embedder(nn.Module):
         scene_emb = self.embedder(self.train_type)
         scene_weight = self.mlp(scene_emb)
 
-        num_type = torch.zeros((bs)).cuda()
+        num_type = torch.zeros((bs)).to("cuda" if torch.cuda.is_available() else "cpu")
         for i in range(bs):
             num_type[i] = self.type2idx[text[i]]
 
-        out_embedding = torch.zeros((bs,self.out_dim)).cuda()
+        out_embedding = torch.zeros((bs,self.out_dim)).to("cuda" if torch.cuda.is_available() else "cpu")
         for i in range(bs):
             out_embedding[i,:] = scene_weight[int(num_type[i]),:]
         text_type = text
@@ -198,7 +198,7 @@ class Embedder(nn.Module):
 
         num_type = idx
 
-        out_embedding = torch.zeros((bs,self.out_dim)).cuda()
+        out_embedding = torch.zeros((bs,self.out_dim)).to("cuda" if torch.cuda.is_available() else "cpu")
         for i in range(bs):
             out_embedding[i,:] = scene_weight[int(num_type[i]),:]
 

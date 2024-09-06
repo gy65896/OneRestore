@@ -295,13 +295,13 @@ class TransformerBlock(nn.Module):
 		return x
 
 if __name__ == '__main__':
-	net = OneRestore().cuda()
-	# x = torch.Tensor(np.random.random((2,3,256,256))).cuda()
-	# query = torch.Tensor(np.random.random((2, 324))).cuda()
+	net = OneRestore().to("cuda" if torch.cuda.is_available() else "cpu")
+	# x = torch.Tensor(np.random.random((2,3,256,256))).to("cuda" if torch.cuda.is_available() else "cpu")
+	# query = torch.Tensor(np.random.random((2, 324))).to("cuda" if torch.cuda.is_available() else "cpu")
 	# out = net(x, query)
 	# print(out.shape)
-	input = torch.randn(1, 3, 512, 512).cuda()
-	query = torch.Tensor(np.random.random((1, 324))).cuda()
+	input = torch.randn(1, 3, 512, 512).to("cuda" if torch.cuda.is_available() else "cpu")
+	query = torch.Tensor(np.random.random((1, 324))).to("cuda" if torch.cuda.is_available() else "cpu")
 	macs, _ = profile(net, inputs=(input, query))
 	total = sum([param.nelement() for param in net.parameters()])
 	print('Macs = ' + str(macs/1000**3) + 'G')
