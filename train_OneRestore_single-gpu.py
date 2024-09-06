@@ -82,9 +82,9 @@ def test(args, restorer, embedder, device, epoch=-1):
             lq = Image.open(f'{args.test_input}/{combine_type[i+1]}/{file_list[j]}')
             restorer.eval()
             with torch.no_grad():
-                lq_re = torch.Tensor((np.array(lq)/255).transpose(2, 0, 1)).unsqueeze(0).to(device)
-                lq_em = transform_resize(lq).unsqueeze(0).to(device)
-                hq = torch.Tensor((np.array(hq)/255).transpose(2, 0, 1)).unsqueeze(0).to(device)
+                lq_re = torch.Tensor((np.array(lq)/255).transpose(2, 0, 1)).unsqueeze(0).to("cuda" if torch.cuda.is_available() else "cpu")
+                lq_em = transform_resize(lq).unsqueeze(0).to("cuda" if torch.cuda.is_available() else "cpu")
+                hq = torch.Tensor((np.array(hq)/255).transpose(2, 0, 1)).unsqueeze(0).to("cuda" if torch.cuda.is_available() else "cpu")
 
                 starttime = time.time()
 

@@ -31,8 +31,8 @@ def main(args):
         lq = Image.open(f'{argspar.input}/{i}')
 
         with torch.no_grad():
-            lq_re = torch.Tensor((np.array(lq)/255).transpose(2, 0, 1)).unsqueeze(0).to(device)
-            lq_em = transform_resize(lq).unsqueeze(0).to(device)
+            lq_re = torch.Tensor((np.array(lq)/255).transpose(2, 0, 1)).unsqueeze(0).to("cuda" if torch.cuda.is_available() else "cpu")
+            lq_em = transform_resize(lq).unsqueeze(0).to("cuda" if torch.cuda.is_available() else "cpu")
 
             start_time = time.time()
             

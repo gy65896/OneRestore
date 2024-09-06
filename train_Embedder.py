@@ -28,7 +28,7 @@ def train_embedding(cur_epoch, model, optimizer, trainloader, testloader, device
         model.train()
         for idx, batch in enumerate(trainloader):
             for i in range(len(batch)):
-                batch[i] = batch[i].to(device)
+                batch[i] = batch[i].to("cuda" if torch.cuda.is_available() else "cpu")
             time_start = time.time()
             out = model(batch, 'train')
             loss = out['loss_total']
@@ -50,7 +50,7 @@ def train_embedding(cur_epoch, model, optimizer, trainloader, testloader, device
         model.eval()
         for idx, batch in enumerate(testloader):
             for i in range(len(batch)):
-                batch[i] = batch[i].to(device)
+                batch[i] = batch[i].to("cuda" if torch.cuda.is_available() else "cpu")
 
             time_start = time.time()
             out = model(batch, 'train')

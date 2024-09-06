@@ -5,7 +5,7 @@
 [![ArXiv](https://img.shields.io/badge/OneRestore-ArXiv-red.svg)](https://arxiv.org/abs/2407.04621)
 [![Paper](https://img.shields.io/badge/OneRestore-Paper-purple.svg)](https://arxiv.org/abs/2407.04621)
 [![Web](https://img.shields.io/badge/OneRestore-Web-blue.svg)](https://gy65896.github.io/projects/ECCV2024_OneRestore/index.html)
-[![Poster](https://img.shields.io/badge/OneRestore-Poster-green.svg)](https://github.com/gy65896/OneRestore/blob/main/img_file/OneRestore_poster.png)
+[![Poster](https://img.shields.io/badge/OneRestore-Poster-green.svg)](https://github.com/gy65896/OneRestore/blob/main/poster/OneRestore_poster.png)
 [![Video](https://img.shields.io/badge/OneRestore-Video-orange.svg)](https://www.youtube.com/watch?v=AFr5tZdPlZ4)
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fgy65896%2FOneRestore&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
@@ -14,7 +14,7 @@
 
 </div>
 <div align=center>
-<img src="https://github.com/gy65896/OneRestore/blob/main/img_file/abstract.jpg" width="720">
+<img src="https://github.com/gy65896/OneRestore/assets/48637474/7e037f8e-8a8d-4953-8aa6-5142e64f2005" width="720">
 </div>
 
 ---
@@ -37,7 +37,7 @@
 
 </div>
 <div align=center>
-<img src="https://github.com/gy65896/OneRestore/blob/main/img_file/pipeline.jpg" width="1080">
+<img src="https://github.com/gy65896/OneRestore/assets/48637474/e26fcaae-3688-489f-8bb4-a698bae3e7fb" width="1080">
 </div>
 
 ## Quick Start
@@ -178,7 +178,7 @@ A generated example is as follows:
 
 | Clear Image | Depth Map | Light Map | Rain Mask | Snow Mask
 | :--- | :---| :---| :--- | :---
-| <img src="https://github.com/gy65896/OneRestore/blob/main/img_file/clear_img.jpg" width="200"> | <img src="https://github.com/gy65896/OneRestore/blob/main/img_file/depth_map.jpg" width="200"> | <img src="https://github.com/gy65896/OneRestore/blob/main/img_file/light_map.jpg" width="200"> | <img src="https://github.com/gy65896/OneRestore/blob/main/img_file/rain_mask.jpg" width="200"> | <img src="https://github.com/gy65896/OneRestore/blob/main/img_file/snow_mask.png" width="200">
+| <img src="https://github.com/user-attachments/assets/243a7018-48db-41af-ad80-1f3e2e67ccdb" width="200"> | <img src="https://github.com/user-attachments/assets/dea93b3a-88b9-41cc-9014-5c864d8755b3" width="200"> | <img src="https://github.com/user-attachments/assets/0860d4fc-eb13-4c50-88bf-739f3e3f9908" width="200"> | <img src="https://github.com/user-attachments/assets/0bb06b82-42ee-4b8c-807a-0f7cc728ec97" width="200"> | <img src="https://github.com/user-attachments/assets/d465721b-bc91-4671-817a-e7253be6c890" width="200">
 
 (Note: The rain and snow masks do not require strict alignment with the image.)
 
@@ -222,7 +222,7 @@ python syn_data.py --hq-file ./data/clear/ --light-file ./data/light_map/ --dept
 
 | Clear Image | low+haze+rain | low+haze+snow
 | :--- | :--- | :---
-| <img src="https://github.com/gy65896/OneRestore/blob/main/img_file/clear_img.jpg" width="200"> | <img src="https://github.com/gy65896/OneRestore/blob/main/img_file/l+h+r.jpg" width="200"> | <img src="https://github.com/gy65896/OneRestore/blob/main/img_file/l+h+s.jpg" width="200">
+| <img src="https://github.com/user-attachments/assets/243a7018-48db-41af-ad80-1f3e2e67ccdb" width="200"> | <img src="https://github.com/user-attachments/assets/4e662af4-e731-449b-a5b2-c2e93d34be75" width="200"> | <img src="https://github.com/user-attachments/assets/108f08c6-d2e1-4a50-96fa-93615aaf5cb9" width="200">
 
 ## Performance
 
@@ -230,26 +230,26 @@ python syn_data.py --hq-file ./data/clear/ --light-file ./data/light_map/ --dept
 
 </div>
 <div align=center>
-<img src="https://github.com/gy65896/OneRestore/blob/main/img_file/method.png" width="720">
+<img src="https://github.com/gy65896/OneRestore/assets/48637474/e8b5d6f6-b78c-43a8-9c21-4e78c166fecf" width="720">
 </div>
 
 </div>
 <div align=center>
-<img src="https://github.com/gy65896/OneRestore/blob/main/img_file/syn.jpg" width="1080">
+<img src="https://github.com/gy65896/OneRestore/assets/48637474/835edc0c-acfb-481c-9116-a23ce1929588" width="1080">
 </div>
 
 ### Real Scene
 
 </div>
 <div align=center>
-<img src="https://github.com/gy65896/OneRestore/blob/main/img_file/real.jpg" width="1080">
+<img src="https://github.com/gy65896/OneRestore/assets/48637474/f9a4df1c-ad64-4339-8485-b76f29010bdd" width="1080">
 </div>
 
 ### Controllability
 
 </div>
 <div align=center>
-<img src="https://github.com/gy65896/OneRestore/blob/main/img_file/control1.jpg" width="410"><img src="https://github.com/gy65896/OneRestore/blob/main/img_file/control2.jpg" width="410">
+<img src="https://github.com/gy65896/OneRestore/assets/48637474/ed57114a-43a5-4221-bc3a-9bc7f3ac2dd5" width="410"><img src="https://github.com/gy65896/OneRestore/assets/48637474/fd8684f7-8494-4fba-8919-dc50e6acb26f" width="410">
 </div>
 
 
