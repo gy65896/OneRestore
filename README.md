@@ -248,8 +248,8 @@ python syn_data.py --hq-file ./data/clear/ --light-file ./data/light_map/ --dept
 | One-to-Many       | [WeatherDiff](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMuYlQAAAAABxdWbznZA1CQ0Bh1JH_ze-A?e=LEkcZw)                                   | TPAMI2023    | 22.49    | 0.7985   | 82.96M     |
 | One-to-Many       | [PromptIR](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMublQAAAAAB9aGo3QK-WlKkL5ItITW9Hg?e=wXrJf1)                                      | NIPS2023     | 25.90    | 0.8499   | 38.45M     |
 | One-to-Many       | [WGWSNet](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMudlQAAAAABi3HUMldxdoLHgDcUNoWMPw?e=z0qjAH)                                       | CVPR2023     | 26.96    | 0.8626   | 25.76M     |
-| One-to-Composite  | [OneRestore](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMuclQAAAAABSmNvDBKR1u5rDtqQnZ8X7A?e=OcnrjY)                                    |              | 28.47    | 0.8784   | 5.98M      |
-| One-to-Composite  | OneRestore<sup>† </sup>                          |              | 28.72    | 0.8821   | 5.98M      |
+| One-to-Composite  | [OneRestore](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMuclQAAAAABSmNvDBKR1u5rDtqQnZ8X7A?e=OcnrjY)                                    | ECCV2024     | 28.47    | 0.8784   | 5.98M      |
+| One-to-Composite  | OneRestore<sup>† </sup>                          | ECCV2024     | 28.72    | 0.8821   | 5.98M      |
 
 
 </div>
