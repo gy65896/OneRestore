@@ -231,10 +231,26 @@ python syn_data.py --hq-file ./data/clear/ --light-file ./data/light_map/ --dept
 
 ### CDD-11
 
-</div>
-<div align=center>
-<img src="https://github.com/gy65896/OneRestore/blob/main/img_file/method.png" width="720">
-</div>
+| Types             | Methods                                       | Venue & Year | PSNR ↑   | SSIM ↑   | #Params   |
+|-------------------|-----------------------------------------------|--------------|----------|----------|------------|
+| Input             | [Input](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMuNlQAAAAABf9KaFodlfC8H-K_MNiriFw?e=SiOrWU)                                         |              | 16.00    | 0.6008   | -          |
+| One-to-One        | [MIRNet](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMuMlQAAAAABBzDLjLu69noXflImQ2V9ng?e=4wohVK)                                        | ECCV2020     | 25.97    | 0.8474   | 31.79M     |
+| One-to-One        | [MPRNet](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMuLlQAAAAAB_iz3hjLHZDMi-RyxHKgDDg?e=SwSQML)                                        | CVPR2021     | 25.47    | 0.8555   | 15.74M     |
+| One-to-One        | [MIRNetv2](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMuQlQAAAAAB2miyepdTE3qdy4z2-LM4pg?e=moXVAR)                                      | TPAMI2022    | 25.37    | 0.8335   | 5.86M      |
+| One-to-One        | [Restormer](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMuPlQAAAAABE86t03kpAVm_TZDIBPKolw?e=vHAR7A)                                     | CVPR2022     | 26.99    | 0.8646   | 26.13M     |
+| One-to-One        | [DGUNet](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMuOlQAAAAABZkHj8tMamqaGhQ0w4VwFrg?e=lfDUlx)                                        | CVPR2022     | 26.92    | 0.8559   | 17.33M     |
+| One-to-One        | NAFNet                                        | ECCV2022     | 24.13    | 0.7964   | 17.11M     |
+| One-to-One        | [SRUDC](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMuWlQAAAAABf9RNAUZH_xL6wF4aODWKqA?e=h4EqVN)                                         | ICCV2023     | 27.64    | 0.8600   | 6.80M      |
+| One-to-One        | [Fourmer](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMuXlQAAAAABQKrbA47G8kMD2cf7Chq5EQ?e=vOiWV0)                                       | ICML2023     | 23.44    | 0.7885   | 0.55M      |
+| One-to-One        | [OKNet](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMuVlQAAAAABSMzfS1xEOxLeuvw8HsGyMw?e=jRmf9t)                                         | AAAI2024     | 26.33    | 0.8605   | 4.72M      |
+| One-to-Many       | [AirNet](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMuZlQAAAAABpnogFf6_bTHcmeMSAW1_pA?e=bALpHs)                                        | CVPR2022     | 23.75    | 0.8140   | 8.93M      |
+| One-to-Many       | [TransWeather](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMuZlQAAAAABoBiLjwJ8L2kl6rGQO5PeJA?e=msprhI)                                  | CVPR2022     | 23.13    | 0.7810   | 21.90M     |
+| One-to-Many       | [WeatherDiff](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMuYlQAAAAABxdWbznZA1CQ0Bh1JH_ze-A?e=LEkcZw)                                   | TPAMI2023    | 22.49    | 0.7985   | 82.96M     |
+| One-to-Many       | [PromptIR](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMublQAAAAAB9aGo3QK-WlKkL5ItITW9Hg?e=wXrJf1)                                      | NIPS2023     | 25.90    | 0.8499   | 38.45M     |
+| One-to-Many       | [WGWSNet](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMudlQAAAAABi3HUMldxdoLHgDcUNoWMPw?e=z0qjAH)                                       | CVPR2023     | 26.96    | 0.8626   | 25.76M     |
+| One-to-Composite  | [OneRestore](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMuclQAAAAABSmNvDBKR1u5rDtqQnZ8X7A?e=OcnrjY)                                    |              | 28.47    | 0.8784   | 5.98M      |
+| One-to-Composite  | OneRestore$^\dagger$                          |              | 28.72    | 0.8821   | 5.98M      |
+
 
 </div>
 <div align=center>
