@@ -81,8 +81,8 @@ def save_matrices_to_excel(psnr_matrix, ssim_matrix, methods, degradation_types,
 # Define the parameters
 clear_folder = './00_gt'
 methods = ['01_input', '02_MIRNet', '03_MPRNet', '04_MIRNetv2', '05_Restormer', 
- '06_DGUNet', '08_SRUDC', '09_Fourmer', '10_OKNet', '11_AirNet', 
- '12_TransWeather', '13_WeatherDiff', '14_PromptIR', '15_WGWSNet', '16_OneRestore_visual']
+ '06_DGUNet', '07_NAFNet', '08_SRUDC', '09_Fourmer', '10_OKNet', '11_AirNet', 
+ '12_TransWeather', '13_WeatherDiff', '14_PromptIR', '15_WGWSNet', '16_OneRestore_visual', '17_OneRestore']
 degradation_types = ['low', 'haze', 'rain', 'snow', 'low_haze', 'low_rain', 'low_snow', 'haze_rain', 'haze_snow', 'low_haze_rain', 'low_haze_snow']
 
 # This is the function that will be used to calculate the PSNR and SSIM values across methods and degradation types
