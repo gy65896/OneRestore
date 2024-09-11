@@ -1,3 +1,9 @@
+</div>
+<div align=center>
+<img src="https://github.com/user-attachments/assets/7183726f-36ac-4634-b297-a96f69f03881" width="200">
+</div>
+
+
  # <p align=center> [ECCV 2024] OneRestore: A Universal Restoration Framework for Composite Degradation</p>
 
 <div align="center">
