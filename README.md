@@ -3,7 +3,6 @@
 <img src="https://github.com/gy65896/OneRestore/blob/main/img_file/logo.png" width="200">
 </div>
 
-
  # <p align=center> [ECCV 2024] OneRestore: A Universal Restoration Framework for Composite Degradation</p>
 
 <div align="center">
