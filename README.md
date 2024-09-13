@@ -244,7 +244,7 @@ python syn_data.py --hq-file ./data/clear/ --light-file ./data/light_map/ --dept
 | One-to-One        | [MIRNetv2](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMuQlQAAAAAB2miyepdTE3qdy4z2-LM4pg?e=moXVAR)                                      | TPAMI2022    | 25.37    | 0.8335   | 5.86M      |
 | One-to-One        | [Restormer](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMuPlQAAAAABE86t03kpAVm_TZDIBPKolw?e=vHAR7A)                                     | CVPR2022     | 26.99    | 0.8646   | 26.13M     |
 | One-to-One        | [DGUNet](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMuOlQAAAAABZkHj8tMamqaGhQ0w4VwFrg?e=lfDUlx)                                        | CVPR2022     | 26.92    | 0.8559   | 17.33M     |
-| One-to-One        | NAFNet                                        | ECCV2022     | 24.13    | 0.7964   | 17.11M     |
+| One-to-One        | [NAFNet](https://1drv.ms/u/c/cbb69e4e3408ebcd/EWm9jiJiZLlLgq1trYO67EsB42LrjGpepvpS4oLqKnj8xg?e=5Efa4W)                                        | ECCV2022     | 24.13    | 0.7964   | 17.11M     |
 | One-to-One        | [SRUDC](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMuWlQAAAAABf9RNAUZH_xL6wF4aODWKqA?e=h4EqVN)                                         | ICCV2023     | 27.64    | 0.8600   | 6.80M      |
 | One-to-One        | [Fourmer](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMuXlQAAAAABQKrbA47G8kMD2cf7Chq5EQ?e=vOiWV0)                                       | ICML2023     | 23.44    | 0.7885   | 0.55M      |
 | One-to-One        | [OKNet](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMuVlQAAAAABSMzfS1xEOxLeuvw8HsGyMw?e=jRmf9t)                                         | AAAI2024     | 26.33    | 0.8605   | 4.72M      |
@@ -256,7 +256,7 @@ python syn_data.py --hq-file ./data/clear/ --light-file ./data/light_map/ --dept
 | One-to-Composite  | [OneRestore](https://1drv.ms/u/c/cbb69e4e3408ebcd/Ec3rCDROnrYggMuclQAAAAABSmNvDBKR1u5rDtqQnZ8X7A?e=OcnrjY)                                    | ECCV2024     | 28.47    | 0.8784   | 5.98M      |
 | One-to-Composite  | OneRestore<sup>† </sup>                          | ECCV2024     | 28.72    | 0.8821   | 5.98M      |
 
-[Indicator calculation code](https://github.com/gy65896/OneRestore/blob/main/img_file/cal_psnr_ssim.py) and [numerical results](https://github.com/gy65896/OneRestore/blob/main/img_file/metrics_CDD-11.xlsx) can be download here.
+[Indicator calculation code](https://github.com/gy65896/OneRestore/blob/main/img_file/cal_psnr_ssim.py) and [numerical results](https://github.com/gy65896/OneRestore/blob/main/img_file/metrics_CDD-11_psnr_ssim.xlsx) can be download here.
 
 </div>
 <div align=center>
