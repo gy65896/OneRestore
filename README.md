@@ -5,7 +5,6 @@
 
  # <p align=center> [ECCV 2024] OneRestore: A Universal Restoration Framework for Composite Degradation</p>
 
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/onerestore-a-universal-restoration-framework/image-dehazing-on-sots-outdoor)](https://paperswithcode.com/sota/image-dehazing-on-sots-outdoor?p=onerestore-a-universal-restoration-framework)
 
 <div align="center">
  
@@ -19,6 +18,11 @@
 [![Hugging Face Demo](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Demo-blue)](https://huggingface.co/spaces/gy65896/OneRestore)
 [![Closed Issues](https://img.shields.io/github/issues-closed/gy65896/OneRestore)](https://github.com/gy65896/OneRestore/issues?q=is%3Aissue+is%3Aclosed)
 [![Open Issues](https://img.shields.io/github/issues/gy65896/OneRestore)](https://github.com/gy65896/OneRestore/issues)
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/onerestore-a-universal-restoration-framework/low-light-image-enhancement-on-lol)](https://paperswithcode.com/sota/low-light-image-enhancement-on-lol?p=onerestore-a-universal-restoration-framework)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/onerestore-a-universal-restoration-framework/image-dehazing-on-sots-outdoor)](https://paperswithcode.com/sota/image-dehazing-on-sots-outdoor?p=onerestore-a-universal-restoration-framework)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/onerestore-a-universal-restoration-framework/rain-removal-on-did-mdn)](https://paperswithcode.com/sota/rain-removal-on-did-mdn?p=onerestore-a-universal-restoration-framework)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/onerestore-a-universal-restoration-framework/isnow-removal-on-snow100k)](https://paperswithcode.com/sota/snow-removal-on-snow100k?p=onerestore-a-universal-restoration-framework)
 
 </div>
 <div align=center>
