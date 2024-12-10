@@ -5,7 +5,9 @@ import torch.nn.functional as F
 import torchvision.transforms as transforms
 from utils.utils_word_embedding import initialize_wordembedding_matrix
 
-class Backbone(nn.Module):
+from huggingface_hub import PyTorchModelHubMixin
+
+class Backbone(nn.Module, PyTorchModelHubMixin, repo_url="https://github.com/gy65896/OneRestore", pipeline_tag="image-feature-extraction"):
     def __init__(self, backbone='resnet18'):
         super(Backbone, self).__init__()
 
