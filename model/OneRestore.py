@@ -21,8 +21,10 @@ import numpy as np
 import time
 from torchvision import transforms
 
+from huggingface_hub import PyTorchModelHubMixin
 
-class OneRestore(nn.Module):
+
+class OneRestore(nn.Module, PyTorchModelHubMixin, repo_url="https://github.com/gy65896/OneRestore", pipeline_tag="image-to-image"):
 	def __init__(self, channel = 32):
 		super(OneRestore,self).__init__()
 		self.norm = lambda x: (x-0.5)/0.5
