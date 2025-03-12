@@ -87,7 +87,7 @@ Please download our pre-trained models and put them in  `./ckpts`.
 
 | Model | OneDrive | Hugging Face| Description
 | :--- | :--- | :--- | :----------
-|embedder_model.tar | [model](https://1drv.ms/u/s!As3rCDROnrbLgqpnhSQFIoD9msXWOA?e=aUpHOT) | [model](https://huggingface.co/gy65896/OneRestore/tree/main/ckpts)  | Text/Visual Embedder trained on our CDD-11.
+|embedder_model.tar | [model](https://1drv.ms/u/s!As3rCDROnrbLgqpnhSQFIoD9msXWOA?e=aUpHOT) | [model](https://huggingface.co/gy65896/OneRestore/tree/main)  | Text/Visual Embedder trained on our CDD-11.
 |onerestore_cdd-11.tar | [model](https://1drv.ms/u/s!As3rCDROnrbLgqpmWkGBku6oj33efg?e=7yUGfN) | model | OneRestore trained on our CDD-11.
 |onerestore_real.tar | [model](https://1drv.ms/u/s!As3rCDROnrbLgqpi-iJOyN6OSYqiaA?e=QFfMeL) | model | OneRestore trained on our CDD-11 for Real Scenes.
 |onerestore_lol.tar | [model](https://1drv.ms/u/s!As3rCDROnrbLgqpkSoVB1j-wYHFpHg?e=0gR9pn) | model | OneRestore trained on LOL (low light enhancement benchmark).
