@@ -1,11 +1,8 @@
 <div align="center">
+
 <img align="left" width="85" height="85" src="https://github.com/gy65896/OneRestore/blob/main/img_file/logo_onerestore.png" alt="">
 
- # [ECCV 2024] OneRestore: A Universal Restoration Framework for Composite Degradation
- 
-</div>
-
-<div align="center">
+ # <p align=center> [ECCV 2024] OneRestore: A Universal Restoration Framework for Composite Degradation</p>
  
 [![ArXiv](https://img.shields.io/badge/OneRestore-ArXiv-red.svg)](https://arxiv.org/abs/2407.04621)
 [![Paper](https://img.shields.io/badge/OneRestore-Paper-yellow.svg)](https://link.springer.com/chapter/10.1007/978-3-031-72655-2_15)
