@@ -1,6 +1,6 @@
 <div align="center">
 
-<img align="left" width="80" height="140" src="https://github.com/gy65896/OneRestore/blob/main/img_file/logo_onerestore.png" alt="">
+<img align="left" width="80" height="80" src="https://github.com/gy65896/OneRestore/blob/main/img_file/logo_onerestore.png" alt="">
 
  # <p align=center> [ECCV 2024] OneRestore: A Universal Restoration Framework for Composite Degradation</p>
  
