@@ -1,10 +1,9 @@
-</div>
-<div align=center>
-<img src="https://github.com/gy65896/OneRestore/blob/main/img_file/logo_onerestore.png" width="200">
-</div>
+<div align="center">
+<img align="left" width="85" height="85" src="https://github.com/gy65896/OneRestore/blob/main/img_file/logo_onerestore.png" alt="">
 
- # <p align=center> [ECCV 2024] OneRestore: A Universal Restoration Framework for Composite Degradation</p>
-
+ # [ECCV 2024] OneRestore: A Universal Restoration Framework for Composite Degradation
+ 
+</div>
 
 <div align="center">
  
